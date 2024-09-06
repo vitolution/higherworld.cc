@@ -1,0 +1,60 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    background: black;
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+.video-container {
+    align-items: center;
+    display: flex;
+    /* position: relative; */
+    height: 100%;
+    justify-content: center;
+    width: 100%;
+    overflow: hidden;
+}
+
+video {
+    display: none;
+    object-fit: contain;
+}
+
+@media (orientation: landscape) {
+    video.landscape {
+        display: block;
+        height: auto;
+        width: 100%;
+    }
+}
+
+@media (orientation: portrait) {
+    video.portrait {
+        display: block;
+        height: 100%;
+        width: auto;
+    }
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.4); /* Dunkler Overlay-Effekt */
+    color: white;
+}
+
+h1 {
+    font-size: 4rem;
+    text-align: center;
+}
